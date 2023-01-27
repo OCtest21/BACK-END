@@ -2,6 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 
+mongoose.connect('mongodb+srv://octest:Drpepper1991@piquante.oakncol.mongodb.net/HotTakes?retryWrites=true&w=majority',
+  { useNewUrlParser: true,
+    useUnifiedTopology: true })
+  .then(() => console.log('Connexion à MongoDB réussie !'))
+  .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 const app = express();
 
